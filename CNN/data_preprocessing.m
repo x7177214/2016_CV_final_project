@@ -58,6 +58,7 @@ totalTrain = sum(numTrainImagePerCate);
                 
                 [~,~,D] =size(im);
                 
+                
                 % data encoding %
                 GG = ones(Size^2,D);
                 for k =1 : D
