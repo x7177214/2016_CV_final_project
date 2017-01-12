@@ -53,25 +53,23 @@ totalTrain = sum(numTrainImagePerCate);
                 h = h+1;
             
                 im = imread(train_image_paths{sum(numTrainImagePerCate( 1: (i-1)) ) + j});
-                
                 im = imresize(im , [Size ,Size]);
-                
                 im = im2double(im);
                 
                 [~,~,D] =size(im);
                 
+                % data encoding %
                 GG = ones(Size^2,D);
-                
                 for k =1 : D
                     tmp = im(:,:,k)';
                     tmp = tmp(:);
 
                     GG(:,k) = tmp ;
                 end
-
                 GG = GG';
                 unrollGG = GG(:); 
                 unrollGG  =unrollGG' ;
+                % data encoding end%
                 
                 train = [train ; unrollGG ];          
         end
@@ -81,11 +79,10 @@ totalTrain = sum(numTrainImagePerCate);
     % shuffle the order 
     ShuffleIdx = randperm(totalTrain);
     
-     
     train = train(ShuffleIdx, :) ;
     trainLabel =trainLabel(ShuffleIdx, :);
     
     
-    % please manually save the variables 'train' and 'trainLabel' as one .mat file
+    % Then please manually save the variables 'train' and 'trainLabel' as one .mat file
 
     % To save the testing data, change the variable names as 'test' and 'testLabel' 
