@@ -1,1 +1,2 @@
-# 2016_CV_final_project
+# 2016 CV final project
+team : 19
