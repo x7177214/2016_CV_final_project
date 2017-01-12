@@ -4,12 +4,12 @@ close
 clc
 
 % for training and testing on face
-data_path = '../data/face_DataAug';
-data_path = '../data/face_forTest';
+    data_path = '../data/face_DataAug';
+    %data_path = '../data/face_forTest';
 
 % for training and testing on whole body
-%data_path = '../data/whole_DataAug';
-%data_path = '../data/whole_forTest';
+    %data_path = '../data/whole_DataAug';
+    %data_path = '../data/whole_forTest';
 
 
 categories = {'A-gun','A-Vai','Ding-Ding','Lally','Meatball','MuoMuo','O-tun','Soy-Milk', ...
@@ -81,11 +81,11 @@ totalTrain = sum(numTrainImagePerCate);
     % shuffle the order 
     ShuffleIdx = randperm(totalTrain);
     
-    % to save the testing data, change the variable name as 'test' and 'testLabel'  
+     
     train = train(ShuffleIdx, :) ;
     trainLabel =trainLabel(ShuffleIdx, :);
     
     
+    % please manually save the variables 'train' and 'trainLabel' as one .mat file
 
-
-    
+    % To save the testing data, change the variable names as 'test' and 'testLabel' 
