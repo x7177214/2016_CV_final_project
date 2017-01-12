@@ -1,7 +1,7 @@
 # 2016 CV final project
 team : 19
 
-introduction:
+Introduction:
 As we know that the fine-tune problem is quite a
 challenge because the detailed pattern and feature
 recognition is complex and difficult. And there are many
@@ -26,5 +26,5 @@ select the method:
 run the main.m
 
 (2) CNN
-a.use data
+a.use data_preprocessing.m
 b.run the python file
